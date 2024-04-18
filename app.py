@@ -4,7 +4,7 @@ class InferlessPythonModel:
     def initialize(self):
         self.model = SentenceTransformer("jinaai/jina-embeddings-v2-base-code",trust_remote_code=True)
         # control your input sequence length up to 8192
-        self.model.max_seq_length = 1024
+        self.model.max_seq_length = 8192
 
     def infer(self, inputs):
         sentences = inputs["sentences"]
